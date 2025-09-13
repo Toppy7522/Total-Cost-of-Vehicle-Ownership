@@ -1,0 +1,199 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motorbike Investment App</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">   <!-- Added wrapper -->
+
+  <!-- ==== LEFT SIDE: Inputs ==== -->
+  <div class="section">
+
+    <!--
+   
+    <div class="button-container">
+      <span class="paras" id="brand">Brand:</span><br><br>
+      <button class="brandoptions" id="brandanswer">Brand</button><br>
+      <button class="brandoptions" value="Honda">Honda</button>
+      <button class="brandoptions" value="Suzuki">Suzuki</button>
+      <button class="brandoptions" value="Royal Enfield">Royal Enfield</button>
+      <button class="brandoptions" value="Hero">Hero</button>
+      <button class="brandoptions" value="TVS">TVS</button>
+      <button class="brandoptions" value="Bajaj">Bajaj</button>
+    </div>
+    <br>
+-->
+
+    <!-- Ownership -->
+    <div class="input-container section">
+      <div class="input-wrapper"> 
+        <span class="paras">Duration of Ownership:</span><br><br>
+        <span class="paras" id="Years">Years:</span>
+        <input type="number" min="0" max="20" value="0" step="1" class="inputbox" id="input-year">
+        <span class="paras" id="Months">Months:</span>
+        <input type="number" min="0" max="12" value="0" step="1" class="inputbox" id="input-month">
+      </div>
+    </div>
+    <br>
+
+    <!-- Onroad Price -->
+    <div class="slider-container section">
+      <div class="input-wrapper">
+        <span class="paras">On-Road Price <br>(Ex-Showroom + RTO Fees + Insurance + Tax):</span>
+        <input type="number" min="0" max="10000000" value="500000" step="1" class="inputbox" id="input-onroadprice">
+      </div><br>
+      <input type="range" min="0" max="10000000" value="500000" step="1000" class="slider" id="slider-onroadprice">
+    </div>
+    <br>
+
+    <!-- Accessories -->
+    <div class="input-container section">
+      <div class="input-wrapper">
+        <span class="paras">Accessories/Customization <br>(Stock and Aftermarket):</span>
+        <input type="number" min="0" max="1000000" value="0" step="1" class="inputbox" id="input-accessories">
+      </div>
+    </div>
+    <br>
+
+    <!-- Insurance -->
+    <div class="input-container section">
+      <div class="input-wrapper">
+        <span class="paras">Insurance Premium per year:</span>
+        <input type="number" min="0" max="1000000" value="2000" step="1" class="inputbox" id="input-insurance">
+      </div>
+    </div>
+    <br>
+
+    <!-- City Mileage -->
+    <div class="slider-container section">
+      <div class="input-wrapper">
+        <span class="paras">City Mileage (Your Average):</span>
+        <input type="number" min="1" max="120" value="60" step="0.1" class="inputbox" id="input-city-mileage">
+      </div><br>
+      <input type="range" min="1" step="0.1" max="120" value="60" class="slider" id="slider-city-mileage">
+    </div>
+    <br>
+
+    <!-- Highway Mileage -->
+    <div class="slider-container section">
+      <div class="input-wrapper">
+        <span class="paras">Highway Mileage (Your Average):</span>
+        <input type="number" min="1" max="120" value="60" step="0.1" class="inputbox" id="input-highway-mileage">
+      </div><br>
+      <input type="range" min="1" step="0.1" max="120" value="60" class="slider" id="slider-highway-mileage">
+    </div>
+    <br>
+
+    <!-- Distance per day -->
+    <div class="slider-container section">
+      <div class="input-wrapper">
+        <span class="paras">Average Distance Covered per day <br>(Daily Commute):</span>
+        <input type="number" min="1" max="300" value="10" step="1" class="inputbox" id="input-distance-per-day">
+      </div><br>
+      <input type="range" min="1" step="1" max="300" value="10" class="slider" id="slider-distance-per-day">
+    </div>
+    <br>
+
+    <!-- Trips -->
+    <div class="input-container section">
+      <div class="input-wrapper"> 
+        <span class="paras">Trips in a year:</span><br><br>
+        <span class="paras" id="Months">Average Distance:</span>
+        <input type="number" min="0" max="12000" value="0" step="1" class="inputbox" id="input-tripkm">
+      </div>
+    </div>
+    <br>
+
+    <!-- Geography -->
+    <div class="button-container section">
+      <span class="paras">Geography of Residence (Commuting Route):</span><br>
+      <button class="geography-residence" id="geographyanswer">Place</button><br>
+      <button class="geography-residence" value="City">City</button>
+      <button class="geography-residence" value="Highway">Highway</button>
+      <button class="geography-residence" value="City+Highway">City + Highway</button>
+    </div>
+    <br>
+
+    <!-- General Service -->
+    <div class="input-container section">
+      <div class="input-wrapper">
+        <span class="paras">General Service:</span>
+        <input type="number" min="0" max="50000" value="0" step="1" class="inputbox" id="input-service">
+      </div>
+    </div>
+    <br>
+
+    <!-- Accidental repairs -->
+    <div class="input-container section">
+      <div class="input-wrapper">
+        <span class="paras">Accidental Repairs <br>(After Insurance Claim Costs):</span>
+        <input type="number" min="0" max="50000" value="0" step="1" class="inputbox" id="input-repairs">
+      </div>
+    </div>
+    <br>
+
+    <!-- Frequent Expenses -->
+    <div class="input-container section">
+      <div class="input-wrapper">
+        <span class="paras">Expense Name:</span>
+        <input type="text" value="Type of Expense" class="inputbox" id="input-name">  
+      </div><br>
+      <div class="input-wrapper">
+        <span class="paras">Years:</span>
+        <input type="number" min="0" max="20" value="0" step="1" class="inputbox" id="input-expyear">
+        <span class="paras">Months:</span>
+        <input type="number" min="0" max="12" value="0" step="1" class="inputbox" id="input-expmonth">
+        <span class="paras">Days:</span>
+        <input type="number" min="0" max="31" value="0" step="1" class="inputbox" id="input-expday">
+      </div><br>
+      <div class="input-wrapper">
+        <span class="paras">Expense:</span>
+        <input type="number" min="0" max="100000" value="0" step="1" class="inputbox" id="input-expense">
+      </div>
+    </div>
+    <br>
+
+    <!-- Show Values Button -->
+    <button id="displayButton">Show Values</button>
+  </div>
+
+  <!-- ==== RIGHT SIDE: Results ==== -->
+  <div class="section stats">
+     <h2>Ownership Cost Analysis</h2>
+
+    <p>Total distance covered during Ownership: <span id="displaydistanceperday"></span></p>
+    <p>Total cost of Fuel(Rs.100/L): <span id="displayMileagecost"></span></p>
+    <p>Total Recurring expenses: <span id="displaytotalrecurringexpenses"></span></p>
+    <p>Current Depreciated Price (IRDAI): <span id="displayIRDAIdep"></span></p>
+    <p>Total Cost of Ownership: <span id="displayTCO"></span></p>
+    <p>Total Cost per Km: <span id="displaycostperKm"></span></p>
+    <p>Total Cost of Running per year: <span id="displaycostperyear"></span></p>
+    <p>Total Cost of Running per month: <span id="displaycostpermonth"></span></p>
+    <p>Total Cost of Running per week: <span id="displaycostperweek"></span></p>
+    <p>Total Cost of Running per day: <span id="displaycostperday"></span></p>
+    <p>Total Net Profit/Loss: <span id="displayremainingvehiclevalue"></span></p>
+    <hr><br>
+<!--
+    <p>Current Brand: <span id="displayBrand"></span></p>
+    <p>Current On-Road Price: <span id="displayOnroadprice"></span></p>
+    <p>Current Accessories: <span id="displayaccessories"></span></p>
+    <p>Current Insurance: <span id="displayinsurance"></span></p>
+    <p>Current City Mileage: <span id="displayCityMileage"></span></p>
+    <p>Current Highway Mileage: <span id="displayHighwayMileage"></span></p>
+    <p>Geographical Residence: <span id="displaygeography"></span></p>
+    <p>General Service Cost: <span id="displayservice"></span></p>
+    <p>Accidental Repairs: <span id="displayrepairs"></span></p>
+    <p>Duration of Ownership: <span id="displayownership"></span></p>
+    <p>Tripskm: <span id="displaytrips"></span></p>
+    -->
+
+  </div>
+
+</div> <!-- End container -->
+
+<script src="index.js"></script>
+</body>
+</html>
