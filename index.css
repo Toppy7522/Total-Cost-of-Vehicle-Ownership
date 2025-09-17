@@ -16,8 +16,25 @@ body {
   display: flex;
   justify-content: center;
 }
+#main-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #0037ff;
+}
 
 /* ===== Container Layout ===== */
+#additionalexpense {
+    max-width: 1200px;
+    min-width: 400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr; /* wider inputs, balanced results */
+  gap: 25px;
+  font-size:30px;
+  background: #ff0000;
+
+}
 .container {
   max-width: 1200px;
   width: 100%;
@@ -142,37 +159,25 @@ button {
   transition: all 0.3s ease;
 }
 
-.brandoptions,
-.geography-residence {
+.brandoptions,.vehicle-type,.fuel-type,
+.geography-residence,.depreciationtype {
   background: #007bff;
   color: white;
   margin: 4px;
 }
 
-.brandoptions:hover,
-.geography-residence:hover {
+.brandoptions:hover,.vehicle-type:hover,.fuel-type:hover
+.geography-residence:hover,.depreciationtype:hover {
   background: #0056b3;
   transform: scale(1.05);
 }
 
-.brandoptions:active {
+.brandoptions:active,.vehicle-type:active,.fuel-type:active,
+.geography-residence:active,.depreciationtype:active {
   background: #ff0004;
 }
 
-/* Show Values button */
-#displayButton {
-  background: #28a745;
-  color: white;
-  display: block;
-  margin: 15px auto;
-  width: auto;
-  padding: 12px 28px;
-}
 
-#displayButton:hover {
-  background: #218838;
-  transform: scale(1.05);
-}
 
 /* ===== Results Panel ===== */
 .stats {
@@ -216,6 +221,17 @@ button {
 .stats p:last-child span {
   color: #dc3545; /* net loss red */
 }
+#statstitle {
+
+  color: #ff0000;
+
+}
+
+#statstitle2 {
+
+  color: #0022ff;
+
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
@@ -244,5 +260,7 @@ button {
   #displayButton {
     width: 100%;
     text-align: center;
+    color: chartreuse;
+
   }
 }
